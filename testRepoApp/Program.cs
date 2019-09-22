@@ -12,8 +12,9 @@ namespace testRepoApp
         {
             while (true)
             {
-                Console.WriteLine("0 - exit");
+                Console.WriteLine("0 - Exit");
                 Console.WriteLine("1 - Addition");
+                Console.WriteLine("2 - Substraction");
                 int input = int.Parse(Console.ReadLine());
                 if (input == 0)
                     break;
