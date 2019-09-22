@@ -10,15 +10,16 @@ namespace testRepoApp
     {
         static void Main(string[] args)
         {
+            int i = 45;
             while (true)
             {
-                Console.WriteLine("0 - Exit");
-                Console.WriteLine("1 - Addition");
-                Console.WriteLine("2 - Substraction");
-                Console.WriteLine("3 - Multiplication");
-                Console.WriteLine("4 - Power");
-                int input = int.Parse(Console.ReadLine());
-                if (input == 0)
+                Console.WriteLine("totally changed system!");
+                Console.WriteLine("0 - trolo");
+                
+                int input = Convert.ToInt32(Console.ReadLine());
+                if (input == 3)
+                    continue;
+                else if (input > i)
                     break;
 
             }
