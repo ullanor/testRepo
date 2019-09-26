@@ -12,12 +12,13 @@ namespace testRepoApp
     {
         static void Main(string[] args)
         {
+            string testString = "You can download the file and read it!";
             while (true)
             {
+                Console.WriteLine(testString);
                 Console.WriteLine("0 - Exit");
                 Console.WriteLine("1 - Addition");
-                Console.WriteLine("2 - Substraction");
-                Console.WriteLine("3 - Multiplication");
+                Console.WriteLine("2 - Substraction");               
                 Console.WriteLine("55 - Download txt file");
                 Console.WriteLine("56 - Read text from downl.file");
                 Console.WriteLine("57 - Remove downloaded file");
