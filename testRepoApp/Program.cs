@@ -17,11 +17,11 @@ namespace testRepoApp
             {
                 Console.WriteLine(testString);
                 Console.WriteLine("0 - Exit");
-                Console.WriteLine("1 - Addition");
-                Console.WriteLine("2 - Substraction");               
+                Console.WriteLine("1 - Addition");              
                 Console.WriteLine("55 - Download txt file");
                 Console.WriteLine("56 - Read text from downl.file");
                 Console.WriteLine("57 - Remove downloaded file");
+                Console.WriteLine("58 - Count special marks (!) in text");
                 int input = 99;
                 try
                 {
@@ -39,8 +39,30 @@ namespace testRepoApp
                     ReadDownloadedFile();
                 if (input == 57)
                     RemoveDownloadedFile();
+                if (input == 58)
+                    CountSpecialMarks();
             }
 
+        }
+
+        static string ReadFileToString()
+        {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "//webText.txt";
+            if (!File.Exists(path))
+                return string.Empty;
+            string fileString = File.ReadAllText(path);
+            return fileString;
+        }
+
+        static void CountSpecialMarks()
+        {
+            string fileString = ReadFileToString();
+            if (fileString == string.Empty)
+                return;
+            int result = fileString.ToCharArray().Count(c => c == '!');
+            //int result1 = str.Length - str.Replace("a", "").Length;
+            //int result2 = str.Split('a').Length - 1;
+            Console.WriteLine("Number of '!' in text: " + result);
         }
 
         static void RemoveDownloadedFile()
