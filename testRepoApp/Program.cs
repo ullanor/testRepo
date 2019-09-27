@@ -21,7 +21,7 @@ namespace testRepoApp
                 Console.WriteLine("55 - Download txt file");
                 Console.WriteLine("56 - Read text from downl.file");
                 Console.WriteLine("57 - Remove downloaded file");
-                Console.WriteLine("58 - Count special marks (!) in text");
+                Console.WriteLine("59 - Count special marks (!) in text");
                 int input = 99;
                 try
                 {
